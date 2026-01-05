@@ -4,6 +4,8 @@ os: linux
 files:
   - source: nginx.conf
     destination: /etc/nginx/
+    overwrite: true
+
 
 hooks:
   BeforeInstall:
