@@ -1,5 +1,6 @@
 #!/bin/bash
+set -e
 
-echo "Copying nginx.conf"
+echo "Copying nginx.conf to /etc/nginx/"
 
-cp -f nginx.conf /etc/nginx/nginx.conf
+cp -f "$PWD/nginx.conf" /etc/nginx/nginx.conf
