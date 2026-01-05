@@ -1,14 +1,15 @@
 version: 0.0
 os: linux
 
-files:
-  - source: nginx.conf
-    destination: /etc/nginx/
-    overwrite: true
-
-
 hooks:
   BeforeInstall:
     - location: scripts/install_nginx.sh
+      runas: root
+
   AfterInstall:
+    - location: scripts/configure_nginx.sh
+      runas: root
+
+  ApplicationStart:
     - location: scripts/restart_nginx.sh
+      runas: root
