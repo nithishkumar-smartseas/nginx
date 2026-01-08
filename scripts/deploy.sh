@@ -14,5 +14,6 @@ docker pull 991940085316.dkr.ecr.us-east-1.amazonaws.com/nginx:latest
 docker run -d \
   --name nginx \
   --network app-network \
+  --restart unless-stopped \
   -p 80:80 \
   991940085316.dkr.ecr.us-east-1.amazonaws.com/nginx:latest
