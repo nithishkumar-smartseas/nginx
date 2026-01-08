@@ -7,7 +7,7 @@ docker login --username AWS --password-stdin 991940085316.dkr.ecr.us-east-1.amaz
 docker network create app-network || true
 
 docker stop nginx || true
-docker rm nginx || true
+docker rm -f nginx || true
 
 docker pull 991940085316.dkr.ecr.us-east-1.amazonaws.com/nginx:latest
 
